@@ -1,0 +1,39 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Hello React!</title>
+    <link rel="stylesheet" type="text/css" href="velha.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.24.0/babel.js"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js'></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.1.0/react.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.1.0/react-dom.min.js"></script>
+
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <script type="text/babel">
+
+        class Square extends React.Component{
+            render(){
+                return (
+                    <button className="square">
+                        {this.props.value}
+                    </button>
+                );
+            }
+        }
+
+        class Hello extends React.Component{
+            render(){
+                return (
+                    <h1> Hello porra</h1>
+                );
+            }
+        } 
+        ReactDOM.render(<hello  />, 
+                        document.getElementById('root'));
+    </script>
+  </body>
+  </html>

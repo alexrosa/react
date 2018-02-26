@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <title>Hello React</title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.js"></script>
+        <script src="react/react.js"></script>
+        <script src="react/react-dom.js"></script>
+    </head>
+    <body>
+        <div id="nome"></div>
+        <div id="outra"></div>
+        <script type="text/babel">
+            class Hello extends React.Component{
+                render(){
+                    return (
+                        <h1>Olá meu nome é {this.props.nome}<br/> 
+                            {this.props.sobrenome}!!!!!!</h1> 
+                    );
+                }
+            }
+
+            ReactDOM.render(
+                <Hello nome='Alexandre' sobrenome='Rosa'/>,
+                document.getElementById('nome')
+            );
+
+            ReactDOM.render(
+                <Hello nome='Daniel' sobrenome='teste'/>,
+                document.getElementById('outra')
+            );
+
+        </script>
+    </body>
+</html>

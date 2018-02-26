@@ -1,0 +1,52 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Hello React!</title>
+    <link rel="stylesheet" type="text/css" href="test.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.24.0/babel.js"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js'></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.1.0/react.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.1.0/react-dom.min.js"></script>
+
+  </head>
+  <body>
+    <div id="carros"></div>
+    <div id="nome"></div>
+
+    <script type="text/babel">
+
+        var carros = ['Cruze','Fusion','Civic', 'Elantra','Gol', 'Jetta'];
+
+        ReactDOM.render(
+            <div>
+            {
+                //código javascript
+                carros.map(function (carro) {
+                    return <li>{carro}</li>
+                })
+                //fim código
+            }        
+            </div>,
+            /* passando o objeto */
+            document.getElementById('carros')
+        );
+
+            //classe passando parametros.
+        class Hello extends React.Component{
+            render(){
+                return(
+                    <h1>Olá meu nome é {this.props.nome}!!!!!!</h1>
+                );
+            }
+        }
+        ReactDOM.render(
+            <Hello nome='Alexandre'/>,
+            document.getElementById('nome')
+        );
+
+
+
+    </script>
+  </body>
+  </html>
